@@ -3,18 +3,52 @@
 <head>
     <link rel="stylesheet" href="reveal.js/css/reveal.css">
     <link rel="stylesheet" href="reveal.js/css/theme/white.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
     <div class="reveal">
         <div class="slides">
-            <section>
-                <h1>Coding4Fun #16</h1>
+            <section data-background-image="/assets/logo.png">
+                <h3>Coding4Fun #16</h3>
                 <h2>Kafka Stream</h2>
-                <img src="assets/kafka-logo.png" />
-                <img src="assets/java-logo.png" />
+                <img src="assets/kafka-logo.png" height="150">
+                <img src="assets/java-logo.png" height="150">
             </section>
-            <section>Slide 2</section>
+            <section data-background-image="/assets/logo.png">
+                <section data-background-image="/assets/logo.png">
+                    <h2>Environment</h2>
+                </section>
+                <section>
+                    <h3>Prerequisite</h3>
+                    <ul>
+                        <li>Docker Engine + Docker-compose cli</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Build your own Kafka Cluster</h2>
+                    <label>
+                        Clone the repo, and create your cluster (based on <a
+                            href="https://github.com/confluentinc/cp-all-in-one">confluent repo</a>)</label>
+                    <pre><code data-trim data-noescape>
+docker-compose -f docker/docker-compose.yml up    
+                </code></pre>
+                </section>
+            </section>
+            <section  data-background-image="/assets/logo.png">
+                <section  data-background-image="/assets/logo.png">
+                    <h2>Kafka Basics</h2>
+                </section>
+                <section>
+                </section>
+            </section>
+            <section  data-background-image="assets/logo.png">
+                <section  data-background-image="assets/logo.png">
+                    <h2>Let's play with stream</h2>
+                </section>
+                <section>
+                </section>
+            </section>
         </div>
     </div>
     <script src="reveal.js/js/reveal.js"></script>
