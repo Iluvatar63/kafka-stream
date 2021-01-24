@@ -1,0 +1,8 @@
+{"namespace": "Coding4Fun.ShiftChanged",
+ "type": "record",
+ "name": "ShiftChanged",
+ "fields": [
+     {"name": "CureEquipmentId", "type": "string"},
+     {"name": "ShiftCode", "type": "string"}
+ ]
+}
