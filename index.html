@@ -9,13 +9,13 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <section data-background-image="/assets/logo.png">
-                <h3>Coding4Fun #16</h3>
+            <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <h1>Coding4Fun #16</h1>
                 <h2>Kafka Stream</h2>
                 <img src="assets/kafka-logo.png" height="150">
                 <img src="assets/java-logo.png" height="150">
             </section>
-            <section data-background-image="/assets/logo.png">
+            <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                 <section data-background-image="/assets/logo.png">
                     <h2>Environment</h2>
                 </section>
@@ -23,9 +23,10 @@
                     <h3>Prerequisite</h3>
                     <ul>
                         <li>Docker Engine + Docker-compose cli</li>
+                        <li>Maven</li>
                     </ul>
                 </section>
-                <section>
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                     <h2>Build your own Kafka Cluster</h2>
                     <label>
                         Clone the repo, and create your cluster (based on <a
@@ -34,19 +35,47 @@
 docker-compose -f docker/docker-compose.yml up    
                 </code></pre>
                 </section>
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>Install Maven</h2>
+                    <blockquote>Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation</blockquote>
+                    <div>
+                        Download <a href="https://apache.mediamirrors.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip">Maven</a> and unzip it somewhere for later use.
+                    </div>
+                    <div>
+                        PS : You can add bin path in your system path to simplify usage
+                    </div>
+                    <img src="assets/mvn-v.png" />
+                </section>
             </section>
-            <section  data-background-image="/assets/logo.png">
-                <section  data-background-image="/assets/logo.png">
+            <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                     <h2>Kafka Basics</h2>
                 </section>
-                <section>
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+
                 </section>
             </section>
-            <section  data-background-image="assets/logo.png">
-                <section  data-background-image="assets/logo.png">
-                    <h2>Let's play with stream</h2>
+            <section>
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>Let's play with kafka and streams</h2>
+                    <div>
+                        for our first sample, we will implement
+                        <ul>
+                            <li>A end-of-cure event producer</li>
+                            <li>A shift-changed event producer</li>
+                            <li>A consumer for enhanced-end-of-cure event</li>
+                            <li>A stream to join end-of-cure and shift-changed</li>
+                        </ul>
+                    </div>
                 </section>
-                <section>
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h3>Create a end of cure producer</h3>
+                    <pre><code data-trim data-noescape>
+avrogen -s shift-changed.asvc
+                                        </code></pre>
+                </section>
+                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h3>Create a end of shift-change producer</h3>
                 </section>
             </section>
         </div>

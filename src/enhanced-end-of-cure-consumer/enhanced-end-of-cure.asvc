@@ -1,0 +1,10 @@
+{"namespace": "Coding4Fun.EnhancedEndOfCure",
+ "type": "record",
+ "name": "EnhancedEndOfCure",
+ "fields": [
+     {"name": "Date", "type": "string"},
+     {"name": "ItemCode", "type": "string"},
+     {"name": "CureEquipmentId", "type": "string"},
+     {"name": "ShiftCode", "type": "string"}
+ ]
+}
