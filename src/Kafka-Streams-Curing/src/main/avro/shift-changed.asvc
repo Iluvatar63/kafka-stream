@@ -1,0 +1,8 @@
+{"namespace": "com.coding4fun.kafka.models",
+ "type": "record",
+ "name": "ShiftChanged",
+ "fields": [
+     {"name": "CureEquipmentId", "type": "string"},
+     {"name": "ShiftCode", "type": "string"}
+ ]
+}
