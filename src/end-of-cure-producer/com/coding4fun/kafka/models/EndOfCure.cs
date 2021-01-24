@@ -5,7 +5,7 @@
 //    is regenerated
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Coding4Fun.EndOfCure
+namespace com.coding4fun.kafka.models
 {
 	using System;
 	using System.Collections.Generic;
@@ -15,9 +15,9 @@ namespace Coding4Fun.EndOfCure
 	
 	public partial class EndOfCure : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Avro.Schema.Parse("{\"type\":\"record\",\"name\":\"EndOfCure\",\"namespace\":\"Coding4Fun.EndOfCure\",\"fields\":[" +
-				"{\"name\":\"Date\",\"type\":\"string\"},{\"name\":\"ItemCode\",\"type\":\"string\"},{\"name\":\"Cur" +
-				"eEquipmentId\",\"type\":\"string\"}]}");
+		public static Schema _SCHEMA = Avro.Schema.Parse("{\"type\":\"record\",\"name\":\"EndOfCure\",\"namespace\":\"com.coding4fun.kafka.models\",\"fi" +
+				"elds\":[{\"name\":\"Date\",\"type\":\"string\"},{\"name\":\"ItemCode\",\"type\":\"string\"},{\"nam" +
+				"e\":\"CureEquipmentId\",\"type\":\"string\"}]}");
 		private string _Date;
 		private string _ItemCode;
 		private string _CureEquipmentId;

@@ -1,4 +1,4 @@
-{"namespace": "Coding4Fun.EnhancedEndOfCure",
+{"namespace": "com.coding4fun.kafka.models",
  "type": "record",
  "name": "EnhancedEndOfCure",
  "fields": [

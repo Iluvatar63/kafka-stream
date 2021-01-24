@@ -1,5 +1,5 @@
 ﻿using System;
-using Coding4Fun.EndOfCure;
+using com.coding4fun.kafka.models;
 using System.Threading;
 using System.Threading.Tasks;
 using Confluent.Kafka.SyncOverAsync;

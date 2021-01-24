@@ -5,7 +5,7 @@
 //    is regenerated
 // </auto-generated>
 // ------------------------------------------------------------------------------
-namespace Coding4Fun.ShiftChanged
+namespace com.coding4fun.kafka.models
 {
 	using System;
 	using System.Collections.Generic;
@@ -13,18 +13,43 @@ namespace Coding4Fun.ShiftChanged
 	using Avro;
 	using Avro.Specific;
 	
-	public partial class ShiftChanged : ISpecificRecord
+	public partial class EnhancedEndOfCure : ISpecificRecord
 	{
-		public static Schema _SCHEMA = Avro.Schema.Parse("{\"type\":\"record\",\"name\":\"ShiftChanged\",\"namespace\":\"Coding4Fun.ShiftChanged\",\"fie" +
-				"lds\":[{\"name\":\"CureEquipmentId\",\"type\":\"string\"},{\"name\":\"ShiftCode\",\"type\":\"str" +
-				"ing\"}]}");
+		public static Schema _SCHEMA = Avro.Schema.Parse("{\"type\":\"record\",\"name\":\"EnhancedEndOfCure\",\"namespace\":\"com.coding4fun.kafka.mod" +
+				"els\",\"fields\":[{\"name\":\"Date\",\"type\":\"string\"},{\"name\":\"ItemCode\",\"type\":\"string" +
+				"\"},{\"name\":\"CureEquipmentId\",\"type\":\"string\"},{\"name\":\"ShiftCode\",\"type\":\"string" +
+				"\"}]}");
+		private string _Date;
+		private string _ItemCode;
 		private string _CureEquipmentId;
 		private string _ShiftCode;
 		public virtual Schema Schema
 		{
 			get
 			{
-				return ShiftChanged._SCHEMA;
+				return EnhancedEndOfCure._SCHEMA;
+			}
+		}
+		public string Date
+		{
+			get
+			{
+				return this._Date;
+			}
+			set
+			{
+				this._Date = value;
+			}
+		}
+		public string ItemCode
+		{
+			get
+			{
+				return this._ItemCode;
+			}
+			set
+			{
+				this._ItemCode = value;
 			}
 		}
 		public string CureEquipmentId
@@ -53,8 +78,10 @@ namespace Coding4Fun.ShiftChanged
 		{
 			switch (fieldPos)
 			{
-			case 0: return this.CureEquipmentId;
-			case 1: return this.ShiftCode;
+			case 0: return this.Date;
+			case 1: return this.ItemCode;
+			case 2: return this.CureEquipmentId;
+			case 3: return this.ShiftCode;
 			default: throw new AvroRuntimeException("Bad index " + fieldPos + " in Get()");
 			};
 		}
@@ -62,8 +89,10 @@ namespace Coding4Fun.ShiftChanged
 		{
 			switch (fieldPos)
 			{
-			case 0: this.CureEquipmentId = (System.String)fieldValue; break;
-			case 1: this.ShiftCode = (System.String)fieldValue; break;
+			case 0: this.Date = (System.String)fieldValue; break;
+			case 1: this.ItemCode = (System.String)fieldValue; break;
+			case 2: this.CureEquipmentId = (System.String)fieldValue; break;
+			case 3: this.ShiftCode = (System.String)fieldValue; break;
 			default: throw new AvroRuntimeException("Bad index " + fieldPos + " in Put()");
 			};
 		}

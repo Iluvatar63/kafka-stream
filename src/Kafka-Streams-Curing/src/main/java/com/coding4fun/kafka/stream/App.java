@@ -17,20 +17,30 @@ import org.apache.kafka.streams.StreamsConfig;
 import org.apache.kafka.streams.Topology;
 import org.apache.kafka.streams.kstream.Consumed;
 import org.apache.kafka.streams.kstream.KStream;
+
+import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
 import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
+
+import static java.util.Collections.singletonMap;
 
 public class App 
 {
     static final String END_OF_CURE_TOPIC_NAME="end-of-cure";
     static final String SHIFT_CHANGE_TOPIC_NAME="shift-change";
     static final String ENHANCED_SHIFT_CHANGE_TOPIC_NAME="enhanced-end-of-cure";
+    private static final String DEFAULT_BOOTSTRAP_SERVERS = "localhost:9092";
+    private static final String DEFAULT_SCHEMA_REGISTRY_URL = "http://localhost:8081";
+
     public static void main( String[] args )
     {
-        // Create an instance of StreamsConfig from the Properties instance
+        Map<String, String>  serdeConfig = singletonMap(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, DEFAULT_SCHEMA_REGISTRY_URL);
         final Serde <String> stringSerde = Serdes.String();
         final Serde<EndOfCure> enfOfCureSerializer  = new SpecificAvroSerde<>();
         final Serde<ShiftChanged> shiftChangeSerializer  = new SpecificAvroSerde<>();
         final Serde<EnhancedEndOfCure> enhancedEnfOfCureSerializer  = new SpecificAvroSerde<>();
+        enfOfCureSerializer.configure(serdeConfig, false);
+        shiftChangeSerializer.configure(serdeConfig, false);
+        enhancedEnfOfCureSerializer.configure(serdeConfig, false);
 
         StreamsBuilder builder = new StreamsBuilder();
         builder.stream(END_OF_CURE_TOPIC_NAME, Consumed.with(stringSerde, enfOfCureSerializer))
@@ -53,8 +63,8 @@ public class App
     private static Properties getProperties() {
         Properties settings = new Properties();
         settings.put(StreamsConfig.APPLICATION_ID_CONFIG, "coding4fun-stream");
-        settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        settings.put("schema.registry.url", "http://my-schema-registry:8081");
+        settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, DEFAULT_BOOTSTRAP_SERVERS);
+        settings.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, DEFAULT_SCHEMA_REGISTRY_URL);
         return settings;
     }
 }

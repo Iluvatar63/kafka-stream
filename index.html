@@ -96,6 +96,7 @@ mvn archetype:generate -DgroupId=com.coding4fun.kafka.stream -DartifactId=Kafka-
                 </section>
                 <section>
                     mvn clean generate-sources package
+                    mvn exec:java
                 </section>
                 <section>
                     java -jar target/Kafka-Streams-Curing-1.0-SNAPSHOT-jar-with-dependencies.jar
