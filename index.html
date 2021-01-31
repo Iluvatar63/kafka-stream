@@ -9,15 +9,24 @@
 <body>
     <div class="reveal">
         <div class="slides">
-            <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+            <section data-background-size="150px" data-background-position="top left" data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                 <h1>Coding4Fun #16</h1>
                 <h2>Kafka Stream</h2>
                 <img src="assets/kafka-logo.png" height="150">
                 <img src="assets/java-logo.png" height="150">
             </section>
-            <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+            <section data-background-size="150px" data-background-position="top left" data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <img  css="border-radius: 50%" src="https://media-exp1.licdn.com/dms/image/C5603AQHcHZ4v8aTWqg/profile-displayphoto-shrink_200_200/0/1552682356763?e=1617840000&v=beta&t=VyG3W4gUfzzQjIvNFJ1txh-0DXWT089yvzB5PGPrux0" /><h2>Pierre Plagnes</h2>
+                <ul>
+                    <li>Archi FS Execution Produit Fini</li>
+                    <li>Dev (.net, js, python...)  la nuit</li>
+                    <li>Fondateur MUG In Clermont</li>
+                </ul>
+            </section>
+            <section data-background-size="150px" data-background-position="top left"
+                data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                 <section data-background-image="/assets/logo.png">
-                    <h2>Environment</h2>
+                    <h2>Environment and Prerequisite</h2>
                 </section>
                 <section>
                     <h3>Prerequisite</h3>
@@ -26,7 +35,8 @@
                         <li>Maven</li>
                     </ul>
                 </section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                     <h2>Build your own Kafka Cluster</h2>
                     <label>
                         Clone the repo, and create your cluster (based on <a
@@ -35,11 +45,15 @@
 docker-compose -f docker/docker-compose.yml up    
                 </code></pre>
                 </section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                     <h2>Install Maven</h2>
-                    <blockquote>Based on the concept of a project object model (POM), Maven can manage a project's build, reporting and documentation</blockquote>
+                    <blockquote>Based on the concept of a project object model (POM), Maven can manage a project's
+                        build, reporting and documentation</blockquote>
                     <div>
-                        Download <a href="https://apache.mediamirrors.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip">Maven</a> and unzip it somewhere for later use.
+                        Download <a
+                            href="https://apache.mediamirrors.org/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip">Maven</a>
+                        and unzip it somewhere for later use.
                     </div>
                     <div>
                         PS : You can add bin path in your system path to simplify usage
@@ -47,17 +61,141 @@ docker-compose -f docker/docker-compose.yml up
                     <img src="assets/mvn-v.png" />
                 </section>
             </section>
-            <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
-                    <h2>Kafka Basics</h2>
+            <section data-background-size="150px" data-background-position="top left"
+                data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>Kafka Stream Basics</h2>
                 </section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
-
+                <section>
+                    <h2>Kafka</h2>
+                    <img src="assets/kafka.png" />
                 </section>
+                <section>
+                    <h2>Topics</h2>
+                    <img src="assets/transaction-log.png" />
+                </section>
+                <section>
+                    <a>Why kafka stream generate so much buzz</a>
+                    <ul>
+                        <li>Just a java lib</li>
+                        <li>Robustness & Scalability</li>
+                        <li>Powerfull</li>
+                        <li>Integration with kafka</li>
+                        <li>Stateful and stateless </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Failover & Scalability</h2>
+                    <img src="assets/failover-and-scalability.png" />
+                </section>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>Stream processing</h2>
+                    <img src="assets/stream-publiher.png " />
+                </section>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>What can be used with Kafka </h2>
+                    <img src="assets/kafka-stream-ksql.png" />
+                </section>
+                <section>
+                    <h2>KSQL Sample</h2>
+                    <pre><code>
+CREATE STREAM pageviews_enriched AS \
+SELECT pv.viewtime, \
+       pv.userid AS userid, \
+       pv.pageid, \
+       pv.timestring, \
+       u.gender, \
+       u.regionid, \
+       u.interests, \
+       u.contact_info \
+FROM pageviews_transformed pv \
+LEFT JOIN users u ON pv.userid = users.userid;
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>KSQL Sample 2</h2>
+                    <pre><code>
+CREATE table possible_fraud as
+    SELECT card_number, count(*)
+        FROM authorization_attempts
+        WINDOW TUMBLING (SIZE 5 SECONDS)
+        GROUP BY card_number
+        HAVING count(*) > 3
+                    </code></pre>
+                    <a class="explicit-link">https://bit.ly/2L1fJ3m</a>
+                </section>
+                <section>
+                    <div>
+                        <h2>Start with KSQL when</h2>
+                        <ul>
+                            <li>You don’t use Java/Scala</li>
+                            <li>New to streaming or Kafka</li>
+                            <li>Prefer a UI or REST API</li>
+                            <li>Use case addressed with SQL syntax</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <div>
+                        <h2>Start with Kafka Streams when</h2>
+                        <ul>
+                            <li>You already use Java/Scala</li>
+                            <li>Need tight control over performance</li>
+                            <li>Need queryable state</li>
+                            <li>Use case not easily expressed with SQL</li>
+                        </ul>
+                    </div>
+                </section>
+                <section>
+                    <h2>Processor topology</h2>
+                    <img src="assets/topology.png" />
+                </section>
+                <section>
+                    <h2>KStream vs KTable</h2>
+                    <img src="assets/stream-table.png">
+                </section>
+                <!--<section>
+                    <h2>KStream</h2>
+                    <ul>
+                        <li>A KStream is an abstraction of a record stream</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>KTable</h2>
+                    <ul>
+                        <li>A KStream is an abstraction of a record stream</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Aggregation</h2>
+                    <ul>
+                        <li>An aggregation operation takes one input stream or table, and yields a new tables</li>
+                        <li>The output of an aggregation is always a KTable</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Joins</h2>
+                    <ul>
+                        <li>A join operation merges 2 input stream/table base on the key of their data records, and yields a new stream/table</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Windowing</h2>
+                    <ul>
+                        <li>Lets you control how to group records that have the same key for stateful operations such as aggregations or joins into so-called windows</li>
+                    </ul>
+                </section>-->
             </section>
             <section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
-                    <h2>Let's play with kafka and streams</h2>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>Let's play</h2>
+                    <h2> with kafka and streams</h2>
+                </section>
+                <section>
                     <div>
                         for our first sample, we will implement
                         <ul>
@@ -68,38 +206,201 @@ docker-compose -f docker/docker-compose.yml up
                         </ul>
                     </div>
                 </section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                <section data-background-size="150px" data-background-position="top left" data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                     <h3>Create a end of cure producer</h3>
-                    <pre><code data-trim data-noescape>
-avrogen -s shift-changed.asvc
-                                        </code></pre>
+                    Source code is stored in src/end-of-cure-producer
                 </section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
-                    <h3>Create a end of shift-change producer</h3>
+                <section data-background-size="150px" data-background-position="top left" data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h3>Create a end of cure producer</h3>
+                    Sample dotnet project in src/shift-change-producer
+                </section>
+                <section data-background-size="150px" data-background-position="top left" data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h3>Create a enhanced end of cure consumer</h3>
+                    Sample dotnet project is stored in src/enhanced-end-of-cure-consumer
                 </section>
                 <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
                     <h3>Create a stream project</h3>
                     <pre><code data-trim data-noescape>
 mvn archetype:generate -DgroupId=com.coding4fun.kafka.stream -DartifactId=Kafka-Streams-Curing -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
-
-                                        </code></pre>
-                </section>
-                <section data-background-size="150px" data-background-position="top left"  data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
-                    <h3>Create a end of shift-change producer</h3>
+                    </code></pre>
                 </section>
                 <section>
+                    <h2>Add confluent repository</h2>
+                    <img src="assets/maven-repo.png">
+                </section>
+                <section>
+                    <h2>Maven dependencies</h2>
+                    <img src="assets/maven-logo.png"><br>
                     https://search.maven.org
+                    <ul>
+                        <li>org.apache.logging.log4j - log4j-slf4j-impl</li>
+                        <li>org.slf4j - slf4j-api</li>
+                        <li>org.apache.kafka - kafka-streams</li>
+                        <li>org.apache.avro - avro</li>
+                        <li>io.confluent - Kafka-streams-avro-serde</li>
+                    </ul>
                 </section>
                 <section>
-                    
+                    <h2>Adding avro generation plugin</h2>
                     https://avro.apache.org/docs/current/gettingstartedjava.html
+                </section>
+                <section>
+                    <h2>Add avro definition in src/main/avro</h2>
+                    <img src="assets/avro-schema.png" />
+                </section>
+                <section>
+                    <h2>Source generation</h2>
+                    <pre><code>mvn clean generate-sources</code></pre>
+                    <img src="assets/ls-avro.png">
+                </section>
+                <section>
+                    <h2>Add import</h2>
+<pre><code>
+import java.time.Duration;
+import java.time.temporal.ChronoUnit;
+import java.util.Map;
+import java.util.Properties;
+import com.coding4fun.kafka.models.*;
+import org.apache.kafka.common.serialization.Serde;
+import org.apache.kafka.common.serialization.Serdes;
+import org.apache.kafka.streams.KafkaStreams;
+import org.apache.kafka.streams.StreamsBuilder;
+import org.apache.kafka.streams.StreamsConfig;
+import org.apache.kafka.streams.Topology;
+import org.apache.kafka.streams.kstream.Consumed;
+import io.confluent.kafka.serializers.AbstractKafkaSchemaSerDeConfig;
+import io.confluent.kafka.streams.serdes.avro.SpecificAvroSerde;
+import static java.util.Collections.singletonMap;
+</code></pre>
+                </section>
+                <section>
+                    <h2>Add some constants in app.java</h2>
+<pre><code>
+static final String END_OF_CURE_TOPIC_NAME="end-of-cure";
+static final String SHIFT_CHANGE_TOPIC_NAME="shift-change";
+static final String ENHANCED_SHIFT_CHANGE_TOPIC_NAME="enhanced-end-of-cure";
+private static final String DEFAULT_BOOTSTRAP_SERVERS = "localhost:9092";
+private static final String DEFAULT_SCHEMA_REGISTRY_URL = "http://localhost:8081";
+</code></pre>
+                </section>
+                <section>
+                    <h2>Add a getProperties method</h2>
+<pre><code>
+private static Properties getProperties() {
+    Properties settings = new Properties();
+    settings.put(StreamsConfig.APPLICATION_ID_CONFIG, "coding4fun-stream");
+    settings.put(StreamsConfig.BOOTSTRAP_SERVERS_CONFIG, DEFAULT_BOOTSTRAP_SERVERS);
+    settings.put(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, DEFAULT_SCHEMA_REGISTRY_URL);
+    return settings;
+}
+</code></pre>
+                </section>
+                <section>
+                    <h2>serdes object</h2>
+                    Create seres object in main method
+<pre><code>
+Map&lt;String, String&gt;  serdeConfig = singletonMap(AbstractKafkaSchemaSerDeConfig.SCHEMA_REGISTRY_URL_CONFIG, DEFAULT_SCHEMA_REGISTRY_URL);
+final Serde&lt;String&gt; stringSerde = Serdes.String();
+final Serde&lt;EndOfCure&gt; enfOfCureSerializer  = new SpecificAvroSerde<>();
+enfOfCureSerializer.configure(serdeConfig, false);
+</code></pre>
+                </section>
+                <section>
+                    <h2>Build topology</h2>
+                    Add this in main method
+<pre><code>
+StreamsBuilder builder = new StreamsBuilder();
+builder.stream(END_OF_CURE_TOPIC_NAME, Consumed.with(stringSerde, enfOfCureSerializer))
+    .to(ENHANCED_SHIFT_CHANGE_TOPIC_NAME);
+Topology topology = builder.build();
+</code></pre>
+                </section>
+                <section>
+                    <h2>Kafka stream execution</h2>
+                    Add this in main method
+<pre><code>
+final KafkaStreams streams = new KafkaStreams(topology, getProperties());
+streams.setUncaughtExceptionHandler((Thread thread, Throwable throwable) -> {
+    System.out.println(String.format("Something bad happened in thread {}: {}", thread, throwable.getMessage()));
+    streams.close(Duration.of(3, ChronoUnit.SECONDS));
+    System.exit(1);
+});
+streams.setStateListener((before, after) -> System.out.println(String.format("Switching from state {} to {}", before, after)));
+streams.start();
+</code></pre>
+                </section>
+                <section>
+                    <h2>log4j configuration</h2>
+                    Create a log4j2.properties file under src/main/resources folder
+                    <pre><code>
+status = error
+dest = err
+name = PropertiesConfig
+
+property.filename = target/rolling/rollingtest.log
+
+filter.threshold.type = ThresholdFilter
+filter.threshold.level = debug
+
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = %d{HH:mm:ss.SSS} %-5level- %msg%n
+appender.console.filter.threshold.type = ThresholdFilter
+appender.console.filter.threshold.level = info
+
+rootLogger.level = info
+rootLogger.appenderRef.stdout.ref = STDOUT
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Configure Maven build</h2>
+                    <img src="assets/maven-build" />
+                </section>
+                <section>
+                    <h2>Try a build</h2>
+                    <pre><code>
+mvn compile
+                    </code></pre>
+                </section>
+                <section>
+                    <h2>Play !</h2>
+                    <pre><code>
+mvn package
+mvn install assembly:assembly
+                    </code></pre>
                 </section>
                 <section>
                     mvn clean generate-sources package
                     mvn exec:java
+                    java -cp  target/Kafka-Streams-Curing-1.0-SNAPSHOT-jar-with-dependencies.jar com.coding4fun.kafka.stream.App
                 </section>
                 <section>
                     java -jar target/Kafka-Streams-Curing-1.0-SNAPSHOT-jar-with-dependencies.jar
+                </section>
+            </section>
+            <section>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>Let's play with KSql</h2>
+                </section>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <h2>KSql with Docker-Compose</h2>
+                    <pre><code>
+docker exec -i -t ksqldb-server  /bin/sh
+                    </code></pre>
+                    <pre><code>
+ksql http://ksqldb-server:8088 
+                    </code></pre>
+                </section>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <img src="assets/ksql.png" />
+                </section>
+                <section data-background-size="150px" data-background-position="top left"
+                    data-background-image="https://github.com/lips-coding4fun/kafka-stream/blob/master/assets/logo.png?raw=true">
+                    <a class="explicit-link">https://docs.ksqldb.io/en/latest/how-to-guides/</a>
                 </section>
             </section>
         </div>
