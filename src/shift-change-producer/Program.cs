@@ -43,7 +43,7 @@ namespace end_of_cure_producer
                 while (true)
                 {
                     var evt = new ShiftChanged();
-                    evt.ShiftCode = "A";
+                    evt.ShiftCode = "B";
                     evt.CureEquipmentId = "001";
 
                     producer
@@ -56,7 +56,7 @@ namespace end_of_cure_producer
                                     Console.WriteLine($"error producing message: {task.Exception.InnerException}");
                                 });
 
-                    Thread.Sleep(1000);
+                    Thread.Sleep(10000);
                 }
             }
         }
