@@ -77,7 +77,7 @@ services:
 #      - connect
       - ksqldb-server
     entrypoint: /bin/sh
-    tty: trueksqldb-cli
+    tty: true
 
   akhq:
     # build:
